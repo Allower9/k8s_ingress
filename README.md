@@ -17,6 +17,7 @@
 #####   Создайте новый ключ для сервисного аккаунта, созданного в пункте 1.
 #####   Установите приложение:
  <img width="2880" height="1520" alt="image" src="https://github.com/user-attachments/assets/2153af66-c70b-4e6e-9c8f-35a3c77dcdfb" />
+ 
 #####  после редактируем наш файл ingress -- нам нужно поменять ` ingress.alb.yc.io/subnets: <id-подсети> ` команда смотрит как-раз id подсети
 `yc managed-kubernetes cluster list-node-groups \
     --name <cluster_name> \
@@ -29,6 +30,7 @@
 ` 
 #####  and id сертификата TLS, SSL  см. фото ниже `secretName: "yc-certmgr-cert-id-fpqvvu8eleba85cg209g" `
 <img width="1084" height="152" alt="image" src="https://github.com/user-attachments/assets/9a956868-304f-4c31-8cf6-ad6a4028e76b" />
+
 #####  5) после `kubectl apply -f ingress.yaml`
 #####  6) Создание ALB минут 4-5 - это можно мониторить , а также `kubectl -n nginx-with-svc get ingress` - тоже мониторим
 #####  7) далее из `kubectl -n nginx-with-svc get ingress`  и берем ip из ADDRESS  ---> его пишем в А запись ( в наш днс ) , после взависимости от ttl наша страничка должна появиться
