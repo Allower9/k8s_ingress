@@ -30,7 +30,8 @@
     - host: "allower.online"
 ` 
 #####  and id сертификата TLS, SSL  см. фото ниже `secretName: "yc-certmgr-cert-id-fpqvvu8eleba85cg209g" `
-<img width="1084" height="152" alt="image" src="https://github.com/user-attachments/assets/9a956868-304f-4c31-8cf6-ad6a4028e76b" />
+<img width="1052" height="202" alt="image" src="https://github.com/user-attachments/assets/bd29227e-512c-41fd-87bf-45d72893e49e" />
+
 
 #####  5) после `kubectl apply -f ingress.yaml`
 #####  6) Создание ALB минут 4-5 - это можно мониторить , а также `kubectl -n nginx-with-svc get ingress` - тоже мониторим
