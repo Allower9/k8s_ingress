@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  namespace: nginx-with-svc
+  annotations:
+    ingress.alb.yc.io/subnets: <SUBNET_ID>
+    ingress.alb.yc.io/external-ipv4-address: auto
+    ingress.alb.yc.io/group-name: nginx-ingress-group
+spec:
+  tls:
+    - hosts:
+        - "allower.online"
+      secretName: "yc-certmgr-cert-id-fpqvvu8eleba85cg209g"  # Фиктивное имя (не требует ручного создания)
+  rules:
+    - host: "allower.online"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: nginx-service
+                port:
+                  number: 80
