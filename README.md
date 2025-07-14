@@ -21,7 +21,8 @@
 #####  после редактируем наш файл ingress -- нам нужно поменять ` ingress.alb.yc.io/subnets: <id-подсети> ` команда смотрит как-раз id подсети
 `yc managed-kubernetes cluster list-node-groups \
     --name <cluster_name> \
-    --format json | jq '.[].node_template.network_interface_specs[].subnet_ids[]'` #####  and  домен в двух местах 
+    --format json | jq '.[].node_template.network_interface_specs[].subnet_ids[]'` 
+#####  and  домен в двух местах 
 
 `- hosts:
         - "allower.online" 
