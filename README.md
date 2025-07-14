@@ -35,7 +35,7 @@
 
 #####  5) после `kubectl apply -f ingress.yaml`
 #####  6) Создание ALB минут 4-5 - это можно мониторить , а также `kubectl -n nginx-with-svc get ingress` - тоже мониторим
-#####  7) далее из `kubectl -n nginx-with-svc get ingress`  и берем ip из ADDRESS  ---> его пишем в А запись ( в наш днс ) , после взависимости от ttl наша страничка должна появиться
+#####  7) далее из `kubectl -n nginx-with-svc get ingress`  и берем ip из ADDRESS  ---> его пишем в А запись ( в наш днс ) , в зависимости от TTL, наша страница должна стать доступнойпоявиться
 Итог: <img width="1764" height="584" alt="image" src="https://github.com/user-attachments/assets/81288f21-0417-4d67-9a65-1eac8c16e5d0" />
 
 
